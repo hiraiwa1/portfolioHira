@@ -1,0 +1,17 @@
+// @charset 'utf-8';
+
+/* setting */
+@import './setting/reset';
+@import './setting/size';
+@import './setting/color';
+@import './setting/font';
+
+/* function */
+@import './function/mixin';
+
+/* component */
+@import './component/base';
+@import './component/component';
+
+/* modules */
+@import './modules/animation';
