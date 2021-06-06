@@ -39,11 +39,11 @@
     position: fixed;
     width: 100%;
     z-index: map-get($layer, 'header');
+    background-color: rgba($cMainBg, $alpha: 0.5);
     
     &__inner {
         display: flex;
         padding: 0 15px;
-        background-color: rgba($cMainBg, $alpha: 0.5);
     }
 
     &__menu {
