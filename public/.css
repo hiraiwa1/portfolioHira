@@ -780,7 +780,7 @@ img.img-blur {
 }
 
 .skills__list {
-  transform: translateX(-100%);
+  transform: translateX(-90%);
   opacity: 0;
 }
 .skills__list.is-inview {
