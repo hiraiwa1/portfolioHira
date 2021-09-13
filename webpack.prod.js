@@ -3,7 +3,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //htmlに自動で生成したファイルを注入してくれる
 const {merge} = require('webpack-merge');
 const commonConf = require('./webpack.common');
-const outputFile = '[name].[chunkhash]';
+const outputFile = '[chunkhash]';
 const assetFile = '[contenthash]';
 
 module.exports = () => merge(commonConf({outputFile, assetFile}), {
