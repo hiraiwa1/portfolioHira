@@ -176,6 +176,16 @@
 export default {
   name: "contact",
   head: {
+    head: {
+    title: 'hiraiwa portfolio contact',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'お問い合わせページ'
+      },
+    ],
+  },
     script: [
       {
         src: "/contact/jquery-3.6.0.min.js",

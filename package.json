@@ -12,6 +12,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
+    "nuxt-canonical": "^1.0.6",
     "sass": "^1.49.0",
     "sass-loader": "^10.2.1",
     "vue": "^2.6.14",

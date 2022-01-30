@@ -10,6 +10,14 @@
 export default {
   name: "home",
   head: {
+    title: 'hiraiwa portfolio',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'hiraiwa portofolio'
+      },
+    ],
   },
   data: {
     observer: null,

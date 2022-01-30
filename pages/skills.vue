@@ -68,6 +68,14 @@
 export default {
   name: "skills",
   head: {
+    title: 'hiraiwa portfolio skills',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my skills'
+      },
+    ],
     script: [
       {
         src: "https://kit.fontawesome.com/59e1511a79.js",

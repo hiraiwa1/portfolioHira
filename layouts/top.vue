@@ -16,6 +16,21 @@ export default {
     Header,
     Footer,
   },
+  computed: {
+    currentPageForCanonical() {
+      return this.$route.path.slice(1)
+    }
+  },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: `${process.env.BASE_URL}${this.currentPageForCanonical}`
+        }
+      ]
+    }
+  },
   PageTransition: {
     name: "top",
     mode: "out-in",

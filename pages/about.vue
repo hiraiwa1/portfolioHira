@@ -10,3 +10,18 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'hiraiwa portfolio about',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my about'
+      },
+    ],
+  },
+}
+</script>

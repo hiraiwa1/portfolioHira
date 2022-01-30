@@ -145,6 +145,15 @@
 
 <script>
 export default {
-  name: "workProduct",
+  head: {
+    title: 'hiraiwa portfolio work product',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my work product'
+      },
+    ],
+  }
 };
 </script>

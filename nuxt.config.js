@@ -13,7 +13,14 @@ export default {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
-            { name: 'format-detection', content: 'telephone=no' }
+            { name: 'format-detection', content: 'telephone=no' },
+            { hid: 'og:site_name', property: 'og:site_name', content: 'hiraiwa portfolio' },
+            { hid: 'og:type', property: 'og:type', content: 'website' },
+            { hid: 'og:url', property: 'og:url', content: 'https://hira-18.com' },
+            { hid: 'og:title', property: 'og:title', content: 'hiraiwa portfolio' },
+            { hid: 'og:description', property: 'og:description', content: 'hiraiwa portfolio' },
+            { hid: 'og:image', property: 'og:image', content: '/images/hiraiwaPotofolio_og.png' },
+            { name: 'twitter:card', content: 'summary' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -45,6 +52,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+        ['nuxt-canonical', { baseUrl: 'https://hira-18.com' }],
         '@nuxtjs/proxy',
     ],
 
