@@ -20,31 +20,31 @@
 
 }
 
-// .mainview__title {
-//     opacity: 0;
+.mainview__title {
+    opacity: 0;
 
-//     &.is-inview {
-//         opacity: 1;
-//         @include animation(
-//             $name: mainviewTitle,
-//             $timing-function: ease-out,
-//             $duration: 1.5s,
-//         );
-//         @keyframes mainviewTitle {
-//             0% {
-//                 transform: translateX(-200%) scale(1.5);
-//                 opacity: 0;
-//             }
-//             90% {
-//                 opacity: 1;
-//             }
-//             100% {
-//                 transform: translate(50%, 50%) scale(1);
-//                 opacity: 1;
-//             }
-//         }
-//     }
-// }
+    &.is-inview {
+        opacity: 1;
+        @include animation(
+            $name: mainviewTitle,
+            $timing-function: ease-out,
+            $duration: 1.5s,
+        );
+        @keyframes mainviewTitle {
+            0% {
+                transform: translateX(-200%) scale(1.5);
+                opacity: 0;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(50%, 50%) scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}
 
 // .section__title {
 //      span {

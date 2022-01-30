@@ -1,5 +1,5 @@
 <template>
-  <section id="works" class="section creamBg works">
+  <section id="works" class="section works">
     <div class="section__inner">
       <div class="section__title slide"><span>~ Works ~</span></div>
       <p class="section__text works__title-text">

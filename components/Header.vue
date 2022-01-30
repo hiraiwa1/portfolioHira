@@ -34,6 +34,14 @@
             >Work Product</nuxt-link
           >
         </li>
+        <li class="header__menu-item">
+          <nuxt-link
+            class="header__menu-link"
+            to="/contact/"
+            v-on:click.native="isOpen = false"
+            >Contact</nuxt-link
+          >
+        </li>
       </ul>
       <div class="toggle" v-on:click="isOpen = !isOpen">
         <span class="toggle__span"></span>

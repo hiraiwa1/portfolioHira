@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="section skills">
+  <section id="skills" class="section creamBg skills">
     <div class="section__inner">
       <h2 class="section__title slide"><span>~ Skills ~</span></h2>
     </div>
@@ -74,5 +74,6 @@ export default {
       },
     ],
   },
+  
 };
 </script>
