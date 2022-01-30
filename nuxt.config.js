@@ -19,7 +19,7 @@ export default {
             { hid: 'og:url', property: 'og:url', content: 'https://hira-18.com' },
             { hid: 'og:title', property: 'og:title', content: 'hiraiwa portfolio' },
             { hid: 'og:description', property: 'og:description', content: 'hiraiwa portfolio' },
-            { hid: 'og:image', property: 'og:image', content: '/images/hiraiwaPotofolio_og.png' },
+            { hid: 'og:image', property: 'og:image', content: 'https://hira-18.com/images/hiraiwaPotofolio_og.jpg' },
             { name: 'twitter:card', content: 'summary' },
         ],
         link: [

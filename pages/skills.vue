@@ -24,7 +24,7 @@
             </li>
             <li class="skills__item">
               <i class="fab fa-js-square"></i>
-              <div class="skills__item-title">jQuery</div>
+              <div class="skills__item-title">JavaScript</div>
             </li>
             <li class="skills__item">
               <img
@@ -49,6 +49,22 @@
                 class="skills__item-img"
               />
               <div class="skills__item-title">webpack</div>
+            </li>
+            <li class="skills__item">
+              <img
+                src="~/static/images/nuxt_1.png"
+                alt="webpack"
+                class="skills__item-img"
+              />
+              <div class="skills__item-title">nuxt.js</div>
+            </li>
+            <li class="skills__item">
+              <img
+                src="~/static/images/vue_1.png"
+                alt="webpack"
+                class="skills__item-img"
+              />
+              <div class="skills__item-title">Vue.js</div>
             </li>
             <li class="skills__item">
               <img
