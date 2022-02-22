@@ -54,9 +54,16 @@ export default {
     modules: [
         ['nuxt-canonical', { baseUrl: 'https://hira-18.com' }],
         '@nuxtjs/proxy',
+        '@nuxtjs/sitemap',
     ],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
+    },
+
+    // sitemap
+    sitemap: {
+        path:"sitemap.xml",
+        hostname: "https://hira-18.com/"
     }
 }
