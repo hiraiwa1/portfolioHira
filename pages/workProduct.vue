@@ -23,13 +23,6 @@
           </a>
           <div class="works__box">
             <p class="works__item-title">デザインからコーディングまで自作</p>
-            <a
-              class="works__item-link"
-              href="https://github.com/hiraiwa1/bikeking"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square"></i
-            ></a>
           </div>
         </div>
         <!-- /.works__item -->
@@ -48,13 +41,6 @@
           </a>
           <div class="works__box">
             <p class="works__item-title">コーディングからデザインまで自作</p>
-            <a
-              class="works__item-link"
-              href="https://github.com/hiraiwa1/nantoka_company"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square"></i
-            ></a>
           </div>
         </div>
         <!-- /.works__item -->
@@ -79,13 +65,24 @@
                 >あすまさん</a
               >のデザインカンプ
             </p>
-            <a
-              class="works__item-link"
-              href="https://github.com/hiraiwa1/MOVEHART"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square"></i
-            ></a>
+          </div>
+        </div>
+        <!-- /.works__item -->
+        <div class="works__item slide">
+          <a
+            href="https://cube-camera.vercel.app/"
+            class="works__img-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="works__img"
+              src="~/static/images/works/work-06.jpg"
+              alt=""
+            />
+          </a>
+          <div class="works__box">
+            <p class="works__item-title">コーディングから自作</p>
           </div>
         </div>
         <!-- /.works__item -->
