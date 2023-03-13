@@ -1,0 +1,479 @@
+
+/* ======================================================================
+* section
+====================================================================== */
+.section {
+    min-height: calc(100vh - 330px);
+    padding: 100px 0;
+
+    &.creamBg {
+        background-color: $cMainBg;
+    }
+
+    &__inner {
+        margin: 0 15px;
+        min-width: 290px;
+        overflow: hidden;
+        @include mq(md) {
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-size: 2.8rem;
+        font-family: $fTitle;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        display: block;
+    }
+    &__text {
+        padding-bottom: 2rem;
+    }
+}
+
+/* ======================================================================
+* header
+====================================================================== */
+.header {
+    height: $sHeader;
+    position: fixed;
+    width: 100%;
+    z-index: map-get($layer, 'header');
+    background-color: rgba($cMainBg, $alpha: 0.5);
+    
+    &__inner {
+        display: flex;
+        padding: 0 15px;
+    }
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: darken($color: $cBase, $amount: 10%);
+        opacity: 0.9;
+        z-index: map-get($layer, 'drawer');
+        padding: 100px;
+        box-sizing: border-box;
+        transition: all ease-in-out .2s;
+    }
+    &__menu-item {
+        text-align: center;
+        margin: 15px 0;
+    }
+    &__menu-link {
+        color: $cWhite;
+        height: 100%;
+    }
+    @include mq(lg) {
+        height: $sHeaderLg;
+
+        &__menu {
+            right: 0;
+            height: $sHeaderLg;
+            padding: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+        }
+        &__menu-item {
+            padding: 0px 10px;
+            margin: 10px;
+            position: relative;
+            transition: all ease .3s;
+            &::after {
+                content: "";
+                height: 2px;
+                width: 0px;
+                background-color: $cActive;
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: all ease .3s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+        &__menu-link {
+            color: $cBase;
+            font-size: 1.2rem;
+            line-height: 55px;
+            // box-sizing: border-box;
+        }
+    }
+}
+.toggle {
+    width: 30px;
+    height: 26px;
+    margin: 10px;
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: map-get($layer, 'toggle');
+
+    &__span {
+        width: 100%;
+        height: 2px;
+        background-color: $cBase;
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        transition: all ease-in-out .5s;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2) {
+            top: 10px;
+        }
+        &:nth-child(3) {
+            bottom: 5px;
+        }
+    }
+    @include mq(lg) {
+        display: none;
+    }
+}
+
+
+/* ======================================================================
+* mainview
+====================================================================== */
+.mainview {
+    height: 100vh;
+    width: 100%;
+    background-color: $cMainBg;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        // font-family: $fMainTitle;
+        font-size: 3rem;
+        text-shadow: 0px 0px 1px $cBase;
+        writing-mode: vertical-rl;
+        height: 38%;
+        position: absolute;
+        bottom: 30%;
+        right: 30%;
+        margin: auto;
+        @include mq(lg) {
+            right: 20%;
+            font-size: 4rem;
+        }
+    }
+}
+
+/* ======================================================================
+* about
+====================================================================== */
+.about {
+    &__text {
+        text-align: center;
+    }
+}
+
+/* ======================================================================
+* skills
+====================================================================== */
+.skills {
+
+    &__inner {
+        @include mq(lg) {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+        & img {
+            object-position: center;
+        }
+
+        @include mq(lg) {
+            width: 40%;
+            height: auto;
+            margin: 30px;
+            & img {
+                object-position: left;
+            }
+        }
+    }
+    &__list {
+        border: 2px solid $cActive;
+        border-radius: 10px;
+        padding: 2rem 0px;
+        width: calc((80px + 2rem) * 2);
+        max-width: 90%;
+        margin: auto;
+        @include mq(md) {
+            width: calc((100px + 2rem) * 2);
+        }
+
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: start;
+        }
+
+        @include mq(md) {
+            width: calc((100px + 4rem) * 3);
+            padding: 2rem 15px;
+            & ul {
+                justify-content: center;
+            }
+        }
+    }
+    &__item {
+        width: 80px;
+        margin: 1rem 15px;
+        @include mq(md) {
+            width: 100px;
+            margin: 1rem 15px;
+            margin: 1rem;
+        }
+    }
+    &__item i,
+    &__item img {
+        font-size: 80px;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        color: $cIcon;
+        @include mq(md) {
+            font-size: 100px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__item .fa-sass {
+        font-size: 60px;
+        @include mq(md) {
+            font-size: 70px;
+        }
+    }
+    &__item img {
+        object-fit: contain;
+    }
+    &__item-title {
+        text-align: center;
+    }
+}
+
+/* ======================================================================
+* works
+====================================================================== */
+.works {
+    &__title-text {
+        margin: 0 auto;
+        width: 500px;
+        max-width: 100%;
+    }
+    &__item {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    &__img-link {
+        overflow: hidden;
+        display: block;
+        height: 200px;
+        box-shadow: 0px 0px 5px lighten($color: $cBase, $amount: 10%);
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    &__box {
+        padding: 0.5rem 1rem;
+    }
+    &__item-title {
+        display: inline;
+        &--link {
+            color: $cWorksLink;
+            display: inline-block;
+            transition: all ease .3s;
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+    &__item-link {
+        display: inline;
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+    @include mq(md) {
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: calc((100% - 5px) / 2);
+            margin-right: 5px;
+            &:nth-child(even) {
+                margin-right: 0px;
+            }
+        }
+    }
+    @include mq(lg) {
+        &__item {
+            width: calc((100% - 20px) / 3);
+            &:nth-child(even) {
+                margin-right: 10px;
+            }
+            margin-right: 10px;
+            &:nth-child(3) {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+/* ======================================================================
+* contact
+====================================================================== */
+.contact {
+    width: 100%;
+    
+    & .section__inner {
+        width: 600px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    &__form {
+        padding: 24px;
+    }
+
+    &__form-label {
+        margin-top: 20px;
+        width: 100%;
+
+        & span {
+            font-size: 0.5rem;
+            padding-left: 5px;
+        }
+    }
+
+    &__form-item {
+        width: 100%;
+
+        & input {
+            width: 80%;
+        }
+        &.name input {
+            width: 40%;
+        }
+        &.textarea {
+            width: 100%;
+            height: 200px;
+
+            & textarea {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__form-serect {
+        margin-top: 5px;
+    }
+
+    &__btn {
+        margin-top: 30px;
+
+        input {
+            border: none;
+            padding: 8px 24px;
+            border-radius: 8px;
+            box-shadow: 1px 1px 3px $cBtnShadow;
+            background-color: $cBtnBack;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            color: $cWhite;
+        }
+    }
+    &__form-success {
+        font-weight: bold;
+        color: $cContactText;
+        height: 25px;
+        p {
+            display: none;
+            text-align: center;
+        }
+    }
+}
+
+
+/* ======================================================================
+* footer
+====================================================================== */
+.footer {
+    background-color: $cFooterBg;
+    padding: 5rem 0;
+    text-align: center;
+    color: darken($color: $cWhite, $amount: 30%);
+}
+
+/* ======================================================================
+* toPageTop
+====================================================================== */
+.toPageTop {
+    background-color: $cActive;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+    transition: opacity ease .3s;
+    &.fadein {
+        opacity: 1;
+    }
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 16.5px 16px 16.5px;
+        border-color: transparent transparent $cActive transparent;
+        position: absolute;
+        top: -16px;
+        right: -1px;
+    }
+}
+.toPageTop__link {
+    width: 100%;
+    height: 100%;
+    
+    &::after,
+    &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-top: 3px solid $cWhite;
+        border-left: 3px solid $cWhite;
+        position: absolute;
+        transform: rotate(45deg) translateX(-50%);
+        left: 45%;
+    }
+    &::before {
+        top: 30%;
+    }
+    &::after {
+        top: 60%;
+    }
+}
