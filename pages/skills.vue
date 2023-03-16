@@ -1,35 +1,46 @@
 <template>
-  <section id="skills" class="section creamBg skills">
-    <div class="section__inner">
-      <h2 class="section__title slide"><span>~ Skills ~</span></h2>
-    </div>
-    <div class="skills-content">
-      <div class="section__inner skills__inner">
-        <div class="skills__img slide">
-          <img src="/images/skill-img_1.jpg" alt="skillイメージ" />
-        </div>
-        <div class="skills__list slide">
-          <ul>
-            <li
-              v-for="skill in skills"
-              :key="skill.id"
-              class="skills__item"
-             >
-              <img
-                :src="`/images/icon/${skill.img}`"
-                alt="webpack"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">{{ skill.text }}</div>
-            </li>
-          </ul>
+  <div>
+    <Head>
+      <Title>hiraiwa portfolio : skillsページ</Title>
+      <Meta name="description" content="hiraiwa portfolio : skillsページ"></Meta>
+    </Head>
+    <section id="skills" class="section creamBg skills">
+      <div class="section__inner">
+        <h2 class="section__title slide"><span>~ Skills ~</span></h2>
+      </div>
+      <div class="skills-content">
+        <div class="section__inner skills__inner">
+          <div class="skills__img slide">
+            <img src="/images/skill-img_1.jpg" alt="skillイメージ" />
+          </div>
+          <div class="skills__list slide">
+            <ul>
+              <li
+                v-for="skill in skills"
+                :key="skill.id"
+                class="skills__item"
+               >
+                <img
+                  :src="`/images/icon/${skill.img}`"
+                  alt="webpack"
+                  class="skills__item-img"
+                />
+                <div class="skills__item-title">{{ skill.text }}</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>
+definePageMeta({
+    pageTransition: { name: 'page', mode: 'out-in' },
+})
+
+
 const skillsInit = [
   {
     id: 1,
@@ -89,3 +100,21 @@ const skillsInit = [
 ];
 const skills = ref(skillsInit);
 </script>
+
+<style scoped>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease;
+}
+.page-enter-from {
+  transform: translateX(100vw);
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.page-leave-to {
+  transform: translateX(-100vw);
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

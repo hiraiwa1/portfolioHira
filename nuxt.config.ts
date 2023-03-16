@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@/assets/styles/style.scss'
   ],
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
         lang: 'ja'
@@ -22,7 +23,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.ico' }
       ]
-    }
+    },
   },
   vite: {
     css: {
