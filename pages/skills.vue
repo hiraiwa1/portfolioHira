@@ -1,103 +1,120 @@
 <template>
-  <section id="skills" class="section creamBg skills">
-    <div class="section__inner">
-      <h2 class="section__title slide"><span>~ Skills ~</span></h2>
-    </div>
-    <div class="skills-content">
-      <div class="section__inner skills__inner">
-        <div class="skills__img slide">
-          <img src="~/static/images/skill-img_1.jpg" alt="skillイメージ" />
-        </div>
-        <div class="skills__list slide">
-          <ul>
-            <li class="skills__item">
-              <i class="fab fa-html5"></i>
-              <div class="skills__item-title">HTML</div>
-            </li>
-            <li class="skills__item">
-              <i class="fab fa-css3-alt"></i>
-              <div class="skills__item-title">CSS</div>
-            </li>
-            <li class="skills__item">
-              <i class="fab fa-sass"></i>
-              <div class="skills__item-title">Sass</div>
-            </li>
-            <li class="skills__item">
-              <i class="fab fa-js-square"></i>
-              <div class="skills__item-title">JavaScript</div>
-            </li>
-            <li class="skills__item">
-              <img
-                src="~/static/images/jq_1.png"
-                alt="jQuery"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">jQuery</div>
-            </li>
-            <li class="skills__item">
-              <i class="fab fa-wordpress-simple"></i>
-              <div class="skills__item-title">WordPress</div>
-            </li>
-            <li class="skills__item">
-              <i class="fab fa-gulp"></i>
-              <div class="skills__item-title">gulp</div>
-            </li>
-            <li class="skills__item">
-              <img
-                src="~/static/images/webpack_1.png"
-                alt="webpack"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">webpack</div>
-            </li>
-            <li class="skills__item">
-              <img
-                src="~/static/images/nuxt_1.png"
-                alt="webpack"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">nuxt.js</div>
-            </li>
-            <li class="skills__item">
-              <img
-                src="~/static/images/vue_1.png"
-                alt="webpack"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">Vue.js</div>
-            </li>
-            <li class="skills__item">
-              <img
-                src="~/static/images/ps_1.png"
-                alt="PhotoShop"
-                class="skills__item-img"
-              />
-              <div class="skills__item-title">PhotoShop</div>
-            </li>
-          </ul>
+  <div>
+    <Head>
+      <Title>hiraiwa portfolio : skillsページ</Title>
+      <Meta name="description" content="hiraiwa portfolio : skillsページ"></Meta>
+    </Head>
+    <section id="skills" class="section creamBg skills">
+      <div class="section__inner">
+        <h2 class="section__title slide"><span>~ Skills ~</span></h2>
+      </div>
+      <div class="skills-content">
+        <div class="section__inner skills__inner">
+          <div class="skills__img slide">
+            <img src="/images/skill-img_1.jpg" alt="skillイメージ" />
+          </div>
+          <div class="skills__list slide">
+            <ul>
+              <li
+                v-for="skill in skills"
+                :key="skill.id"
+                class="skills__item"
+               >
+                <img
+                  :src="`/images/icon/${skill.img}`"
+                  alt="webpack"
+                  class="skills__item-img"
+                />
+                <div class="skills__item-title">{{ skill.text }}</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
-<script>
-export default {
-  name: "skills",
-  head: {
-    title: 'hiraiwa portfolio skills',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'my skills'
-      },
-    ],
-    script: [
-      {
-        src: "https://kit.fontawesome.com/59e1511a79.js",
-      },
-    ],
+
+<script setup>
+definePageMeta({
+    pageTransition: { name: 'page', mode: 'out-in' },
+})
+
+
+const skillsInit = [
+  {
+    id: 1,
+    img: "html5.svg",
+    text: "HTML"
   },
-  
-};
+  {
+    id: 2,
+    img: "css3-alt.svg",
+    text: "CSS"
+  },
+  {
+    id: 3,
+    img: "sass.svg",
+    text: "Sass"
+  },
+  {
+    id: 4,
+    img: "square-js.svg",
+    text: "JavaScript"
+  },
+  {
+    id: 5,
+    img: "jq_1.svg",
+    text: "jQuery"
+  },
+  {
+    id: 6,
+    img: "ejs_icon.svg",
+    text: "ejs"
+  },
+  {
+    id: 7,
+    img: "gulp.svg",
+    text: "gulp"
+  },
+  {
+    id: 8,
+    img: "webpack_1.png",
+    text: "webpack"
+  },
+  {
+    id: 9,
+    img: "vite.svg",
+    text: "vite"
+  },
+  {
+    id: 10,
+    img: "vue_1.png",
+    text: "Vue.js"
+  },
+  {
+    id: 11,
+    img: "ps_1.png",
+    text: "PhotoShop"
+  },
+];
+const skills = ref(skillsInit);
 </script>
+
+<style scoped>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease;
+}
+.page-enter-from {
+  transform: translateX(-100vw);
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.page-leave-to {
+  transform: translateX(100vw);
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>
