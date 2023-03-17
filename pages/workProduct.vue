@@ -99,13 +99,13 @@ const workProducts = ref(workProductInit);
   transition: all 0.4s ease;
 }
 .page-enter-from {
-  transform: translateX(100vw);
+  transform: translateX(-100vw);
   opacity: 0;
   filter: blur(1rem);
 }
 
 .page-leave-to {
-  transform: translateX(-100vw);
+  transform: translateX(100vw);
   opacity: 0;
   filter: blur(1rem);
 }
